@@ -14,6 +14,28 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci --workspaces
-      - run: npm run lint --workspaces
-      - run: npm run test --workspaces 
+      # Install root dependencies
+      - name: Install root dependencies
+        run: npm ci
+      # Install frontend dependencies
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm ci
+      # Install backend dependencies
+      - name: Install backend dependencies
+        working-directory: ./backend
+        run: npm ci
+      # Run lint checks
+      - name: Lint frontend
+        working-directory: ./frontend
+        run: npm run lint
+      - name: Lint backend
+        working-directory: ./backend
+        run: npm run lint
+      # Run tests
+      - name: Test frontend
+        working-directory: ./frontend
+        run: npm run test
+      - name: Test backend
+        working-directory: ./backend
+        run: npm run test 
