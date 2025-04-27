@@ -16,15 +16,15 @@ jobs:
           node-version: 20
       # Install root dependencies
       - name: Install root dependencies
-        run: npm ci
+        run: npm install
       # Install frontend dependencies
       - name: Install frontend dependencies
         working-directory: ./frontend
-        run: npm ci
+        run: npm install
       # Install backend dependencies
       - name: Install backend dependencies
         working-directory: ./backend
-        run: npm ci
+        run: npm install
       # Run lint checks if possible
       - name: Lint frontend
         working-directory: ./frontend
