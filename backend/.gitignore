@@ -1,0 +1,34 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+# Build output
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Prisma
+# Keep the dev database in version control, but ignore others
+*.db
+*.db-journal
+!prisma/dev.db
+
+# Cache
+.cache/
+.eslintcache
+
+# Test results
+coverage/
+
+# OS generated files
+.DS_Store
+Thumbs.db
