@@ -1,5 +1,7 @@
-# Ignore README file
+# Ignore README files
 README.md
+README*
+*.md
 
 # Dependencies
 node_modules/

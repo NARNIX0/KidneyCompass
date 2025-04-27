@@ -3,6 +3,11 @@ node_modules/
 .pnp
 .pnp.js
 
+# Ignore README files
+README.md
+README*
+*.md
+
 # Build outputs
 dist/
 build/

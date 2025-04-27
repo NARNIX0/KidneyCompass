@@ -2,6 +2,11 @@ node_modules
 # Keep environment variables out of version control
 .env
 
+# Ignore README files
+README.md
+README*
+*.md
+
 # Build output
 dist/
 build/
